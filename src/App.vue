@@ -1,28 +1,35 @@
 <template>
+
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TitleBar />
+
+    <mu-flex class="flex-wrapper" align-items="center">
+      <mu-flex class="flex-demo" justify-content="center" fill>
+        <MultipleXAxisLine />
+      </mu-flex>
+      <mu-flex class="flex-demo" justify-content="center" fill>
+        <LargeAreaChart />
+      </mu-flex>
+      <mu-flex class="flex-demo" justify-content="center" fill></mu-flex>
+    </mu-flex>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import TitleBar from './components/TitleBar.vue'
+import MultipleXAxisLine from './components/MultipleXAxisLine'
+import LargeAreaChart from "./components/LargeAreaChart";
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+      TitleBar, MultipleXAxisLine, LargeAreaChart
+  },
+  methods: {
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
